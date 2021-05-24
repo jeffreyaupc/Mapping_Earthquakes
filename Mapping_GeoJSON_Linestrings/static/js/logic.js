@@ -31,7 +31,7 @@ L.control.layers(baseMaps).addTo(map);
 let torontoData = "https://raw.githubusercontent.com/jeffreyaupc/Mapping_Earthquakes/main/torontoRoutes.json";
 
 // Grabbing our GeoJSON data.
-d3.json(airportData).then(function(data) {
+d3.json(torontoData).then(function(data) {
     data.features.forEach(x => L.geoJson(x)
     .bindPopup(`<h2>Airline: ${x.properties.airline}</h2>
     <hr><h3>Destination: ${x.properties.dst}</h3>`)
