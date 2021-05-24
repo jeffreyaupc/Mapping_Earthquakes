@@ -35,6 +35,5 @@ d3.json(torontoData).then(function(data) {
     data.features.forEach(x => L.geoJson(x)
     .bindPopup(`<h2>Airline: ${x.properties.airline}</h2>
     <hr><h3>Destination: ${x.properties.dst}</h3>`)
-    .addTo(map))
-      
+    .addTo(map)) 
 });
